@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UV-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Pomodoro </title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/8f67e6cb9e.js" crossorigin="anonymous"></script>
+    </head>
+    <style>
+    </style>
+    <body >
+        <div class="main">
+            <div class="header">
+                <div class="container">
+                    <h1><i class="fa-solid fa-circle-check"></i>Pomodoro</h1>
+                    <span>
+                        <button class="btn"><i class="fa-solid fa-chart-column"></i><span>Report</span></button>
+                        <button class="btn"><i class="fa-solid fa-gear"></i><span>Setting</span></button>
+                        <button class="btn"><i class="fa-solid fa-user"></i><span>Sign In</span></button>
+                        <div class="dropdown">
+                            <button class="btn dropbtn"><i class="fa-solid fa-bars"></i></button>
+                            <div class="dropdown-content">
+                                <a href="#"><i class="fa-solid fa-user"></i>Login</a>
+                                <a href="#"><i class="fa-solid fa-crown"></i>Premium</a>
+                                <a href="#"><i class="fa-regular fa-keyboard"></i>Shortcut</a>
+                            </div>
+                        </div>
+                    </span>
+                </div>
+            </div>
+            <div class="clock">
+                <div class="container">
+                    <div class="time-string">
+                        <button class="button__link active" id="set25" onclick="pomodoro()">Pomodoro</button>
+                        <button class="button__link" id="set5" onclick="shortbreak()">Short Break</button>
+                        <button class="button__link" id="set15" onclick="longbreak()">Long Break</button>
+                    </div>
+                    <div id="timeDisplay"><p>25:00</p></div>
+                    <div class="actionButton">
+                        <button onclick="startStop()" id="startPause">Start</button>
+                        <span class="skipButton__container"><button id="reset"><i class="fa-solid fa-forward"></i></button></span>
+                    </div>
+                </div>
+            </div>
+            <div class="task">
+                <div class="container">
+                    <div class="list">
+                        <h3>#1</h3>
+                        <p>Time to focus!</p>
+                    </div>
+                    <div class="table">
+                        <table>
+                            <tr>
+                                <th>Tasks</th>
+                            </tr>
+                        </table>                        
+                    </div>
+                    <div class="addtask">
+                        <input type="text" id="inputBox" placeholder="Enter your text">
+                        <button onclick="addTask()">Add</button>
+                    </div>
+                    <ul id="list-container">
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
